@@ -1,4 +1,4 @@
-# $Id: ClassGenerator.pm,v 1.16 2008-08-28 17:14:11 cantrelld Exp $
+# $Id: ClassGenerator.pm,v 1.18 2009-02-10 15:08:12 cantrelld Exp $
 
 package Class::DBI::ClassGenerator;
 
@@ -10,7 +10,7 @@ use File::Spec;
 
 use vars qw($VERSION);
 
-$VERSION = '1.01';
+$VERSION = '1.02';
 
 =head1 NAME
 
@@ -230,7 +230,7 @@ databases.
 
 Written by David Cantrell E<lt>david@cantrell.org.ukE<gt>
 
-Copyright 2008 Outcome Technologies Ltd
+Copyright 2008-2009 Outcome Technologies Ltd
 
 This software is free-as-in-speech software, and may be used, distributed,
 and modified under the terms of either the GNU General Public Licence

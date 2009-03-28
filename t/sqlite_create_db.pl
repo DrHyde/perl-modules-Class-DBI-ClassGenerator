@@ -1,4 +1,4 @@
-# $Id: sqlite_create_db.pl,v 1.1 2008-08-27 15:09:31 cantrelld Exp $
+# $Id: sqlite_create_db.pl,v 1.3 2009-02-10 15:08:12 cantrelld Exp $
 
 use strict;
 use warnings;
@@ -12,7 +12,7 @@ my $dbh = DBI->connect("dbi:SQLite:dbname=$dbfile", '', '');
 
 $dbh->do(q{
     CREATE TABLE person (
-        id          INT PRIMARY KEY NOT NULL,
+        id          INT PRIMARY KEY NOT NULL DEFAULT 0,
         known_as    VARCHAR(128),
         formal_name VARCHAR(128),
         dob         DATETIME

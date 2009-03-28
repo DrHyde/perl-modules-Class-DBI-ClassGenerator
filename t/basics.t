@@ -1,4 +1,4 @@
-# $Id: basics.t,v 1.8 2008-08-28 17:07:11 cantrelld Exp $
+# $Id: basics.t,v 1.9 2009-02-10 15:08:12 cantrelld Exp $
 
 use strict;
 use warnings;
@@ -40,7 +40,7 @@ is_deeply(
 is_deeply(
     {$db_driver->_get_columns($dbh, 'person')},
     {
-        id          => { type => '', pk => 1, null => !!0, default => undef },
+        id          => { type => '', pk => 1, null => !!0, default => 0     },
         known_as    => { type => '', pk => 0, null => !!1, default => undef },
         formal_name => { type => '', pk => 0, null => !!1, default => undef },
         dob         => { type => '', pk => 0, null => !!1, default => undef }
