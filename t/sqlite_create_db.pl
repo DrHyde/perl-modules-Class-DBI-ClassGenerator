@@ -6,7 +6,7 @@ use warnings;
 use DBI;
 use File::Temp;
 
-my $dbfile = File::Temp->new(UNLINK => 0);
+my $dbfile = File::Temp->new(UNLINK => 0)->filename();
 
 my $dbh = DBI->connect("dbi:SQLite:dbname=$dbfile", '', '');
 

@@ -1,1 +1,5 @@
-2008-XX-XX   DCANTRELL   0.1   First release
+2008-09-03   DCANTRELL   1.01  Fix bug in tests on BSDish platforms
+                               Now depend specifically on File::Temp 0.19
+                                 or higher
+
+2008-08-28   DCANTRELL   1.0   First release
