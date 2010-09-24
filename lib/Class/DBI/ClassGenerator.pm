@@ -1,5 +1,3 @@
-# $Id: ClassGenerator.pm,v 1.18 2009-02-10 15:08:12 cantrelld Exp $
-
 package Class::DBI::ClassGenerator;
 
 use strict;
@@ -10,7 +8,7 @@ use File::Spec;
 
 use vars qw($VERSION);
 
-$VERSION = '1.02';
+$VERSION = '1.03';
 
 =head1 NAME
 

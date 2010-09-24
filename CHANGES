@@ -1,3 +1,7 @@
+2010-09-24   DCANTRELL   1.03  Fix MySQL tests - irritatingly different
+                                 behaviour re default values from one
+                                 version of the db to another
+
 2009-02-10   DCANTRELL   1.02  Fix another bug in tests which showed up on
                                  BSDish platforms but look more like a
                                  SQLite driver version thing

@@ -35,7 +35,11 @@ is_deeply(
     "Got list of tables from DB"
 );
 is_deeply(
-    {$db_driver->_get_columns($dbh, 'person')},
+    do {
+      my %r = $db_driver->_get_columns($dbh, 'person');
+      $r{id}->{default} = ''; # some versions of the DB return undef here
+      \%r;
+    },
     {
         id          => { type => 'int(11)',      pk => 1,   null => !!0, default => '' },
         known_as    => { type => 'varchar(128)', pk => !!0, null => !!1, default => undef },
