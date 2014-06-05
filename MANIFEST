@@ -1,7 +1,7 @@
 t/pod.t
 t/pod-coverage.t
 lib/Class/DBI/ClassGenerator.pm
-CHANGES
+CHANGELOG
 README
 MANIFEST
 Makefile.PL
@@ -16,4 +16,3 @@ t/mysql.t
 t/mysql_create_db.pl
 bin/c-dbi-classgenerator
 TODO
-META.yml                                 Module meta-data (added by MakeMaker)

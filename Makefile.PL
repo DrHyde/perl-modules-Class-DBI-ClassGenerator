@@ -1,7 +1,7 @@
 use ExtUtils::MakeMaker;
 
 WriteMakefile(
-    NAME          => 'Class-DBI-ClassGenerator',
+    NAME          => 'Class::DBI::ClassGenerator',
     META_MERGE => {
         license => 'other',
         resource => {
