@@ -1,3 +1,5 @@
+2014-06-05   DCANTRELL   1.04  Deprecated and abandoned
+
 2010-09-24   DCANTRELL   1.03  Fix MySQL tests - irritatingly different
                                  behaviour re default values from one
                                  version of the db to another
