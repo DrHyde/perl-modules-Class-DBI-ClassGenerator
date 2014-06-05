@@ -8,20 +8,24 @@ use File::Spec;
 
 use vars qw($VERSION);
 
-$VERSION = '1.03';
+$VERSION = '1.04';
 
 =head1 NAME
 
 Class::DBI::ClassGenerator - generate Class::DBI sub-class modules from a
 pre-exsting database's structure.
 
-=head1 DESCRIPTION
+=head1 SUPPORT
 
-Yadda-yadda
+This module is unsupported, unloved, unmaintained, and DEPRECATED. No
+bugs will be fixed. No patches will be accepted. No users will be helped.
+All bug reports will be either ignored or rejected.
 
-=head1 SYNOPSIS
+I strongly recommend that you switch from using Class::DBI to using
+L<DBIx::Class> instead, and L<DBIx::Class::Schema::Loader> instead of this
+module.
 
-Yadda-yadda
+Unless, that is, someone else takes over ownership.
 
 =head1 SUBROUTINES
 
