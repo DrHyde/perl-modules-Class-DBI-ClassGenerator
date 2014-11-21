@@ -16,3 +16,4 @@ t/mysql.t
 t/mysql_create_db.pl
 bin/c-dbi-classgenerator
 TODO
+MANIFEST.SKIP
