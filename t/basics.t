@@ -2,6 +2,7 @@
 
 use strict;
 use warnings;
+use lib '.';
 
 my $dbfile = require 't/sqlite_create_db.pl';
 END { unlink $dbfile; }

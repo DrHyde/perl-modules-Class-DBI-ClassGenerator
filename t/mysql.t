@@ -2,6 +2,7 @@
 
 use strict;
 use warnings;
+use lib '.';
 
 eval "use DBD::mysql";
 my $dbname;
