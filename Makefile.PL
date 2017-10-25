@@ -3,7 +3,7 @@ use ExtUtils::MakeMaker;
 WriteMakefile(
     NAME          => 'Class::DBI::ClassGenerator',
     META_MERGE => {
-        license => 'other',
+        license => 'open_source',
         resources => {
 	    repository => 'https://github.com/DrHyde/perl-modules-Class-DBI-ClassGenerator',
 	    bugtracker => 'https://github.com/DrHyde/perl-modules-Class-DBI-ClassGenerator/issues'
