@@ -12,6 +12,7 @@ WriteMakefile(
     VERSION_FROM  => 'lib/Class/DBI/ClassGenerator.pm',
     PREREQ_PM     => {
         'Test::More'  => 0,
+        'Test::Differences' => 0,
         'DBI'         => 0,
         'DBD::SQLite' => 0,
         'File::Temp'  => 0.19,
