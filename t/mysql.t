@@ -4,6 +4,8 @@ use strict;
 use warnings;
 use lib '.';
 
+use Test::Differences;
+
 eval "use DBD::mysql";
 my $dbname;
 if($@) {
@@ -30,19 +32,19 @@ ok($dbh, "using database $dbname");
 my $dir = File::Temp->newdir();
 ok(-d $dir, "temp dir $dir exists");
 
-is_deeply(
+eq_or_diff(
     [qw(address person)],
     [sort { $a cmp $b } $db_driver->_get_tables($dbh)],
     "Got list of tables from DB"
 );
-is_deeply(
+eq_or_diff(
     do {
       my %r = $db_driver->_get_columns($dbh, 'person');
       $r{id}->{default} = ''; # some versions of the DB return undef here
       \%r;
     },
     {
-        id          => { type => 'int(11)',      pk => 1,   null => !!0, default => '' },
+        id          => { type => 'int',          pk => 1,   null => !!0, default => '' },
         known_as    => { type => 'varchar(128)', pk => !!0, null => !!1, default => undef },
         formal_name => { type => 'varchar(128)', pk => !!0, null => !!1, default => undef },
         dob         => { type => 'datetime',     pk => !!0, null => !!1, default => undef }
@@ -50,7 +52,7 @@ is_deeply(
     "Got list of columns from a table"
 );
 
-is_deeply(
+eq_or_diff(
     [sort { $a cmp $b } Class::DBI::ClassGenerator::create(
         directory    => $dir,
         connect_info => $dsn,
@@ -69,7 +71,7 @@ ok(-f $_, "... and $_ exists") foreach(
     File::Spec->catfile($dir, qw(A Class Person.pm))
 );
 
-is_deeply(
+eq_or_diff(
     [sort { $a cmp $b } Class::DBI::ClassGenerator::create(
         directory    => $dir,
         connect_info => $dsn,
